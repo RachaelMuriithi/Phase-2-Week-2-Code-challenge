@@ -26,9 +26,9 @@ function BotsPage() {
   function removeFromArmy(bot){
     setArmy(army.filter(b => b !== bot));
   }
-  // function handleRemove(bot){
-  //   //remove from army
-  //   fetch(`http://localhost:8002/bots/${bot.id}`,{
+   function handleRemove(bot){
+     //remove from army
+    fetch(`http://localhost:8002/bots/${bot.id}`,{
   //     method: "DELETE",
   //   })
   //   .then(res => res.json())
