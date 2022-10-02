@@ -30,14 +30,14 @@ function BotsPage() {
      //remove from army
     fetch(`http://localhost:8002/bots/${bot.id}`,{
        method: "DELETE",
-  //   })
-  //   .then(res => res.json())
-  //   .then(() => {
+    })
+    .then(res => res.json())
+    .then(() => {
 
-  //   setArmy(army.filter(b => b !== bot));
-  //   setBots(bots.filter(b => b !== bot));
-  //   })
-  // }
+    setArmy(army.filter(b => b !== bot));
+    setBots(bots.filter(b => b !== bot));
+    })
+  }
 
   return (
     <div>
