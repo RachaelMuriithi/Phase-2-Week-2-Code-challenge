@@ -10,14 +10,22 @@ function BotsPage() {
     .then((res) => res.json())
     .then((data) => {
       setBots(data);
-    }
-})
+    })
+}, [])
+function handleClick(bot) {
+  if (army.includes(bot)) {
+    console.log("bot already exists")
+    return 
+  }
+  const updatedArmy = [...army]
+  updatedArmy.push(bot)
+  setArmy(updatedArmy)
 
-
+}
   return (
     <div>
       <YourBotArmy />
-      <BotCollection />
+      <BotCollection bots = {bots} />
     </div>
   )
 }
